@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home Fitness Assistant</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1 class="app-title">🏠 Home Fitness Assistant</h1>
+    <form id="fitnessForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" required /><br>
+
+      <label for="height">Height (cm or ft):</label>
+      <input type="text" id="height" required /><br>
+
+      <label for="weight">Weight (kg):</label>
+      <input type="number" id="weight" required /><br>
+
+      <label for="bodyType">Current Body Type:</label>
+      <select id="bodyType" required>
+        <option value="chubby">Chubby</option>
+        <option value="slim">Slim</option>
+        <option value="bulk">Bulk</option>
+      </select><br>
+
+      <label for="goal">Fitness Goal:</label>
+      <select id="goal" required>
+        <option value="fit">Fit</option>
+        <option value="sixpack">Six Pack</option>
+        <option value="bodybuilder">Body Builder</option>
+      </select><br>
+
+      <label for="alarmTime">Set Daily Exercise Alarm:</label>
+      <input type="time" id="alarmTime" required /><br>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <div id="planOutput" class="hidden"></div>
+
+    <div id="exerciseSession" class="hidden">
+      <h2>Workout Session</h2>
+      <div id="currentExercise"></div>
+      <button id="nextExercise">Next</button>
+      <button id="completeWorkout">Finish</button>
+    </div>
+
+    <audio id="alarmSound" src="alarm.mp3" preload="auto"></audio>
+    <audio id="motivationSound" src="motivation.mp3" preload="auto"></audio>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
